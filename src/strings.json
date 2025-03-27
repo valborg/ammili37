@@ -6,9 +6,10 @@
         "blaarreglur": "Til þess að fá aðra gesti til að sýna þér vísbendinguna sína á rauða miðanum þá ertu með tvö bannorð. Þú mátt ekki segja þessi orð, þú mátt ekki nota orðhluta eða ríma við þau. En um leið og þú heyrir annan gest segja annað hvort orðið* þá sýnirðu viðkomandi bláa miðann þinn og eftir smá pex þá sýnir hann þér vísbendinguna sína á rauða miðanum. *íslenska orðið á íslensku í hvaða falli, tölu, tíð, kyni eða hætti sem er en það má ekki þýða þau, enska orðið verður að vera á ensku og sömuleiðis íslenska.",
         "blarmidi": "vantar/word",
         "skiptablaum": "vinsamlegast gefið mér ný bannorð",
-        "raudarreglur": "Á rauða miðanum er vísbendingin þín um hvað er í gullna umslaginu, ekki deila þessu með neinum nema annar gestur neyði þig til þess með bláa miðanum sínum. Þú veist ekki hvort að aðrir rauðir miðar sem þú færð að sjá passa við þína vísbendingu, en það ætti að vera nægilega augljóst.",
+        "raudarreglur": "Á rauða miðanum er vísbendingin þín um hvað er í gullna umslaginu, ekki deila þessu með neinum nema annar gestur neyði þig til þess með bláa miðanum sínum. Þú veist ekki hvort að aðrir rauðir miðar sem þú færð að sjá passa við þína vísbendingu, en það ætti að vera nægilega skýrt. Smelltu á gula takkann til að sjá vísbendinguna þína og smelltu á hana aftur til að fela hana.",
         "raudurmidi": "rauðu miðarnir",
-        "synaraudan": "vantar vísbendingu",
+        "fela": "fela miðann",
+        "synaraudan": "sýna vísbendingu",
         "skiptaummal": "english please"
     },
     "en": {
@@ -18,9 +19,10 @@
         "blaarreglur": "To get other guests to show you their red clue cards you have these two taboo words. You cannot say these words, not even parts from them or anything that rhymes with them. But as soon as you hear another guest say either word*, you show them your blue card. After a healthy amount of banter they show you their red clue card. The Icelandic word can be in any form, gender, tense, declination or any other grammatical form of exactly that word and it cannot be translated, the English word must be heard in English and the Icelandic word must be heard in Icelandic.",
         "blarmidi": "orð/missing",
         "skiptablaum": "please give me another blue card",
-        "raudarreglur": "On the red card is your clue about what is in the golden envelope, do not share this with anyone unless another guest forces you to with their blue card. You do not know if other red cards you get to see match your clue, but it should be obvious enough.",
+        "raudarreglur": "On the red card is your clue about what is in the golden envelope, do not share this with anyone unless another guest forces you to with their blue card. You do not know if other red cards you get to see match your clue, but it should be obvious enough. Press the button to reveal it and press it again to hide it.",
         "raudurmidi": "red card text here",
-        "synaraudan": "missing clue",
+        "fela": "hide the card",
+        "synaraudan": "Show clue",
         "skiptaummal": "íslensku takk "
     }
 }

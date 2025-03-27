@@ -4,8 +4,19 @@ import textstringData from './strings.json'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import "bootstrap/dist/css/bootstrap.min.css";
+import { ordalisti } from '../ordalisti'
+import { wordlist } from "../wordlist";
+import './index.css'
 
 let currLang = 'is'
+
+// þetta gæti verið aðeins of mikið
+
+function getMeAWord() {
+  const isl1 = ordalisti[Math.floor(Math.random() * ordalisti.length)]
+  const eng1 = wordlist[Math.floor(Math.random() * wordlist.length)]
+  return [isl1, eng1]
+}
 
 function skiptaUmTungumal() {
     const collection = document.getElementsByName("textstring")
@@ -23,6 +34,22 @@ const App = () => {
     skiptaUmTungumal();
   }, [currLang]);
 
+  const [showClue, setShowClue] = useState(false)
+  const [showWarningButton, setShowWarningButton] = useState(true)
+  const [isl1, setIsl1] = useState('')
+  const [eng1, setEng1] = useState('')
+
+  function bluePilled() {
+    const [isl1, eng1] = getMeAWord()
+    setIsl1(isl1)
+    setEng1(eng1)
+  };
+  
+  function clueOVision() {
+      setShowClue(!showClue)
+      setShowWarningButton(!showWarningButton)
+  }
+
   return (
     <div className="App">
       {/* <Container fluid > */}
@@ -34,14 +61,21 @@ const App = () => {
           <div  className="collapse show" id="adal" aria-labelledby="gull">
             <p name="textstring" className="adalreglur">blerg</p>
           </div>
+          <section id="lang" className="lang">
+      <Button onClick={setLang} name="textstring" className="skiptaummal"></Button>
+      </section>
           <Row >
             <div>
               <h1>Bláir miðar</h1>
               <p className="blaarreglur" name="textstring">blúrg</p>
             </div>
             <div>
-                <p name="textstring" className="blarmidi" ></p>
-                <Button name="textstring" className="skiptablaum btn-info">blabb</Button>
+                {isl1 && <div className='bluey'>
+                  <h1>
+                    {isl1} - {eng1}
+                    </h1>
+                    </div>}
+                <Button name="textstring" className="skiptablaum btn-info" onClick={bluePilled}>blabb</Button>
             </div>
           </Row>
           <Row >
@@ -49,16 +83,19 @@ const App = () => {
               <h1>Rauðir miðar</h1>
               <p name="textstring" className="raudarreglur"></p>
             </div>
-            <div>
-                <p name="textstring" className="raudurmidi" ></p>
-                <Button name="textstring" className="synaraudan btn-warning"></Button>
-            </div>
+            {showClue &&
+            // <p name="textstring" className="fela"></p> &&
+                <Button className="btn-danger" onClick={clueOVision}>
+                  {atob(document.location.hash.substring(1)) }
+                </Button>
+            }
+            {showWarningButton &&
+                <Button name="textstring" className="synaraudan btn-warning" onClick={clueOVision}>Sýna/Show</Button>
+            }
           </Row>
         </Container>
       </section>
-      <section id="lang" className="lang">
-      <Button onClick={setLang} name="textstring" className="skiptaummal"></Button>
-      </section>
+
       {/* </Container> */}
     </div>
   );
