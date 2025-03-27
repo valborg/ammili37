@@ -68,20 +68,25 @@ const App = () => {
             <div>
               <h1>Bláir miðar</h1>
               <p className="blaarreglur" name="textstring">blúrg</p>
+              <p className="blaarreglur2" name="textstring">blúrg</p>
+              <p className="blaarreglur3" name="textstring">blúrg</p>
             </div>
             <div>
-                {isl1 && <div className='bluey'>
-                  <h1>
-                    {isl1} - {eng1}
+                {isl1 && 
+                  <div className='bluey'>
+                    <h1>
+                      {isl1} - {eng1}
                     </h1>
-                    </div>}
-                <Button name="textstring" className="skiptablaum btn-info" onClick={bluePilled}>blabb</Button>
+                  </div>}
+                <Button name="textstring" className="skiptablaum btn-info" onClick={bluePilled}></Button>
             </div>
           </Row>
           <Row >
             <div>
               <h1>Rauðir miðar</h1>
               <p name="textstring" className="raudarreglur"></p>
+              <p name="textstring" className="raudarreglur2"></p>
+
             </div>
             {showClue &&
             // <p name="textstring" className="fela"></p> &&
@@ -90,7 +95,7 @@ const App = () => {
                 </Button>
             }
             {showWarningButton &&
-                <Button name="textstring" className="synaraudan btn-warning" onClick={clueOVision}>Sýna/Show</Button>
+                <Button className="btn-warning" onClick={clueOVision}>Sýna / Show</Button>
             }
           </Row>
         </Container>
